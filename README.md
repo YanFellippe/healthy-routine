@@ -1,7 +1,8 @@
 # Rotina Saudável
 
-![GitHub](https://img.shields.io/github/license/YanFellippe/healthy-routine)
-![GitHub repo size](https://img.shields.io/github/repo-size/YanFellippe/healthy-routine)
+[![GitHub repo size](https://img.shields.io/github/repo-size/YanFellippe/healthy-routine)](https://github.com/YanFellippe/healthy-routine)
+[![GitHub last commit](https://img.shields.io/github/last-commit/YanFellippe/healthy-routine)](https://github.com/YanFellippe/healthy-routine/commits/main)
+[![GitHub issues](https://img.shields.io/github/issues/YanFellippe/healthy-routine)](https://github.com/YanFellippe/healthy-routine/issues)
 
 Uma aplicação web para ajudar no acompanhamento e melhoria da rotina de saúde, fornecendo ferramentas para monitoramento de hidratação, IMC, calorias e muito mais.
 
