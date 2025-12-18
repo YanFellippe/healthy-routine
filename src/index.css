@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Estilos personalizados para modo escuro */
 @layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Melhorias de tipografia para leitura */
+  body {
+    @apply text-gray-800 dark:text-gray-100 bg-gray-50 dark:bg-gray-900;
+    line-height: 1.6;
+  }
+  
+  /* Suporte para toques em dispositivos móveis */
+  @media (hover: none) {
+    * {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
   /* Modo escuro para cards e elementos */
   .dark .bg-white {
     @apply bg-gray-800 text-gray-100;
@@ -27,6 +47,21 @@
   
   .dark .text-gray-500 {
     @apply text-gray-400;
+  }
+  
+  /* Melhorias de toque para dispositivos móveis */
+  @media (max-width: 640px) {
+    /* Aumenta a área de toque para botões em dispositivos móveis */
+    button, a[role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Melhora o espaçamento para toque em itens de lista */
+    li > a, li > button {
+      padding: 12px 16px;
+      display: block;
+    }
   }
   
   .dark .text-gray-800 {

@@ -217,27 +217,29 @@ export default function WeeklyPlan() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-200 flex items-center gap-2">
-          <Calendar className="text-indigo-600" />
-          Planejamento Semanal
-        </h2>
-        <div className="flex gap-2">
-          <button
-            onClick={() => setVisualizacao(visualizacao === "cards" ? "lista" : "cards")}
-            className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm font-semibold"
-          >
-            {visualizacao === "cards" ? "Ver Lista" : "Ver Cards"}
-          </button>
-          <button
-            onClick={restaurarPadrao}
-            className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition text-sm font-semibold flex items-center gap-2"
-          >
-            <RotateCcw size={16} />
-            Restaurar
-          </button>
+      <div className="mb-6">
+        <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:justify-between sm:items-center">
+          <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-200 flex items-center gap-2">
+            <Calendar className="text-indigo-600" />
+            Planejamento Semanal
+          </h2>
+          
+          <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+            <button
+              onClick={() => setVisualizacao(visualizacao === "cards" ? "lista" : "cards")}
+              className="w-full sm:w-auto bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm font-semibold"
+            >
+              {visualizacao === "cards" ? "Ver Lista" : "Ver Cards"}
+            </button>
+            <button
+              onClick={restaurarPadrao}
+              className="w-full sm:w-auto bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition text-sm font-semibold flex items-center justify-center gap-2"
+            >
+              <RotateCcw size={16} />
+              Restaurar
+            </button>
+          </div>
         </div>
-      </div>
 
       {/* Progresso Semanal */}
       <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-6 rounded-2xl shadow-lg mb-6">
@@ -498,6 +500,7 @@ export default function WeeklyPlan() {
           })}
         </div>
       )}
+    </div>
     </div>
   );
 }
